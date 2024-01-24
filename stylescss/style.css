@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+:root{
+   --cor--primaria: #100F0F;
+   --cor--secundaria: #F1F1F1;
+   --cor--terciaria: #E2DCC8;
+   --cor--hover: #0F3D3E;
+   --fonte--primaria: "Krona One", sans-serif;
+   --fonte--secundaria: "Montserrat", sans-serif;
+
+}
+/* essa tag root serve pra declarar váriaveis no css globalmente, e ser mais facil de armazenar uma cor e mudar ela em varios lugares!!
+Tem outra maneira de declarar variavel local, no caso declarar pra um unico local, como um body por exemplo
+Para ver os detalhes só olhar a documentação do css.
+OBS: Para a váriavel ser reconhecida pelo css, ela precisa ter um -- duplo no inicio !! */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Esse comando serve pra resetar as margens , espassamentos e etc, que vem do padrão do css!!
+    Lembrar toda vez que for criar algo personalizavel por o css, resetar o padrão através desse comando !! */
+}
+
+
+body{
+    /* height: 100vh; */
+    /* Aqui é onde coloca a altura pra pegar 100 por cento da tela do aparelho, sem cortar nada, esse vh é do viewport
+    lá do html, onde coloca a pagina pra se adptar ao aparelho de quem está acessando! */
+    box-sizing: border-box;
+    /*Essa propriedade do box-sizzing, ela meio que adpta a imagem a borda de algo, idependente do tamalho ela encolhe, para poder o usuário conseguir ver !!
+    Tem 3 tipos do box-sizzing, se quiser ver mais sobre acesse a documentação , box sizzen da mozila é melhor.*/
+    background-color:var(--cor--primaria);
+    color: var(--cor--secundaria);
+    /* O background-color serve pra mudar a cor do fundo e o color a cor do texto !! 
+    Se eu usar o # consigo colocar cores apartir de de códigos, se não é só colocar o nome normal sem #      */
+
+}
+.tituloDestaque{
+    color: var(--cor--terciaria);
+    /*Estou usando uma classe contida no elemento strong, para usar uma classe é preciso nomea-la no elemento e colocar um (.), antes do nome no css!!
+    Pra que serve? bom imagine que eu queira destacar outro strong com uma cor diferente , se eu usar a mesma cor que o primeiro strong, o outro ficará com a mesma!!
+    Nese caso específico alterei a cor do texto específico da classe !!
+    Então, basicamente serve pra especificar os elementos do texto no html que quero acessar !! */
+}
+
+.linguagens{
+    color: #E94560;
+}
+
+
+.apresentacao {
+    /* margin: 2% 5%;  */
+    padding: 5% 15%;
+    /* Usei o margin pra dar espaçamento nessa parte do main no body em si, criando uma margem entre as seções!! */
+    display: flex;
+    /*Basicamente o flex box ele pega os conteudos e coloca em linha, seja horizontal ou vertical
+    Nesse caso é horizontal, mas pode variar, lembrando que a tag é diferente se for vertical, flex direction , só olhar a documentação para os detalhes.*/
+    align-items: center;
+    /*Alinhou todos os elementos de acordo com a imagem, que no caso está na horizontal
+    Esse justify basicamente dá uma espaçamento entre os elementos filhos, no caso o texto e imagem*/
+    justify-content:space-between;
+    gap: 82px;
+}
+
+.apresentacaoConteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    /* width: 615px; */
+}
+
+.apresentacaoConteudoTitulo{
+    font-size: 2.25rem;
+    /* Troqui a unidade de mendida para não ser absoluta e sim relativa como o usuário quiser, ou seja o texto se adpta !
+    1 rem equivale a 16px, eu transformei e coloquei, lembramdo que na documentação tem tudo sobre isso ! 
+    É sempre recomendável usarmos tamanhos relativos na nossa página, que se adptam ao usuário, como o rem a porcentacem e etc!!*/
+    font-family: var(--fonte--primaria);
+    /* Esse font size serve pra mudar o tamanho do texto  
+    O font family serve pra mudar a fonte do texto especifico, nesse caso é o do titulo
+    Lembrando que tem que importar a fonte do google fonts, pra poder usar ela. Tem todos os passos lá*/
+} 
+.apresentacaoConteudoParagrafo{
+    /* color: white; */
+    font-size: 1.5rem;
+    font-family: var(--fonte--secundaria);
+    /* margin: 20px; */
+    /* margin: 10px 50px; */
+}
+.apresentacaoLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    /* O gap serve pra dar um espaçamento emtre os itens dessa classe do flexbox*/
+}
+
+.botaos{
+    display: flex;
+    justify-content:center;
+    gap: 16px;
+    width: 50%;
+    /* width: 378px; */
+    text-align: center;
+    border: 2px solid var(--cor--terciaria);
+    /* Esse text serve pra alinhar o texto ao centro, no caso o texto do botão no centro dele ! 
+    Exitem outras propriedades pra borda além de solid, só ver na documentação outros estilos de borda*/
+    border-radius: 8px;
+    /* Serve pra arredondar a borda, o tamanho pode variar de acordo com o projeto específico ! */
+    font-size: 1.5rem;
+    padding: 21.5px 0px;
+    /* basicamente aqui eu boiei sinceramente, é algo do espaçamento dos botões, tanto na vertical quanto na horizontal 
+    O primeiro é vertical  e o segundo horizontal, o espaço de cima, e dos lados dos botões ... */
+    text-decoration: none;
+    /* Para tirar a decoração do texto dos botões, aquela linha que fica sublinhando o nome  */
+    font-family: var(--fonte--secundaria);
+    font-weight: 600;
+    /*Alterei o peso da fonte, em específico*/
+    color: var(--cor--secundaria);
+}
+.botaos:hover{
+    background-color: var(--cor--hover);
+    /*O hover é uma propriedade que dá uma animação, quando passamos o mouse por cima do botão */
+}
+
+
+.tituloBotao{
+    color: var(--cor--secundaria);
+    font-family: var(--fonte--primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+    
+}
+
+.rodape{
+    text-align: center;
+    padding: 24px;
+    color: var(--cor--primaria);
+    background-color:var(--cor--terciaria);
+    font-family: var(--fonte--secundaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+
+}
+.cabecalhoBotao{
+    font-family: var(--fonte--secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration:none;
+    color: var(--cor--terciaria)
+}
+.cabecalho{
+    padding:2% 0% 0% 15%;
+}
+.cabecalhoMenu{
+    display: flex;
+    gap: 80px;
+}
+.apresentacaoImagem{
+    width: 50%;
+}
+@media (max-width: 1000px){
+    .cabecalho{
+        padding: 6%;
+    }
+    .cabecalhoMenu{
+        justify-content: center;
+    }
+    .apresentacao {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacaoConteudo{
+        width: auto;
+    }
+}
+
+/* O media serve pra alterar algo sempre que uma condição é atendida
+Veja, nesse caso, sempre que largura maxima da pagina for 1000px ou menor , a tag apresentação que chamei irá mudar de acordo! 
+Isoo serve pra adptar a página de acordo com o aparelho em uso !!*/

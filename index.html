@@ -2,55 +2,37 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- codifica todos os acentos e interpreta corretamente, seja em português ou em outra língua -->
     <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
-    <!-- tornar visivel e editavel no navegador edge -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--É a escala do dispositivo que vai estar acessando a página web em si, se adptando de acordo-->
     <title>Allison Marques</title>
     <link rel="stylesheet" href="./stylescss/style.css">
-    <!--Serve pra linkar o css para o html e conseguir personalizar apartir dele!! -->
 </head>
 <body>
     <header class="cabecalho">
-<!--header basicamente é o cabeçalho da página-->
         <nav class="cabecalhoMenu">
             <a class="cabecalhoBotao" href="index.html">Home</a>
             <a class="cabecalhoBotao" href="about.html">Sobre mim</a>
         </nav>
-        <!-- Essa tag nav, serve basicamente pra inserir os links pra navegar dentro da propria página, sem redirecionar pra outro local!! -->
     </header> 
     <main class="apresentacao">
         <section class="apresentacaoConteudo">
-            <!-- Criei essa seção para separa o texto da imagem em si! 
-            O main é o local do conteúdo principal, onde coloca titulo,pargrafo, botoes-->
             <h1 class="apresentacaoConteudoTitulo">Eleve seu negócio digital a outro nível <strong class="tituloDestaque">com um Front-end de qualidade!</strong></h1>
-            <!-- Perceba que eu defini uma classe pro strong, isso serve pra eu poder modificar somente essa parte específica do testo 
-            A tag strong server pra dar mais destaque a uma parte específica do texto !! -->
-            <p class="apresentacaoConteudoParagrafo">Olá! Sou Allison Marques, desenvolvedor Front-end com especialidade em <strong class="linguagens">React, HTML e CSS.</strong> Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <p class="apresentacaoConteudoParagrafo">Olá! Sou Allison Marques, desenvolvedor Back-End com especialidade em <strong class="linguagens">Java, NodeJS e Typescript</strong> Ajudo  negócios e empresas a colocarem em prática boas ideias. Vamos conversar?</p>
             <div class="apresentacaoLinks">
-                <!-- Basicamente a div vai juntar os dois botôes num lugar só !1 -->
                 <h2 class="tituloBotao"> Acesse minhas redes:</h2>
                 <a class="botaos" href="https://instagram.com/alissonmarques.s"> 
                     <img src="./imgs/instagram.png" alt="Símbolo do instagram">
                     Instagram 
                 </a>
-                <!--O href serve pra fazer um redicinamento pra um link, nesse caso usando a tag <a></a>, o <a> funciona como âncora de um lugar a outro.
-                Essa tag ela serve pra redirecionar algo, um nome em si, meio parecido com um botão mas diferente
-                Então o botão só é mais usado quando queremos fazer uma interação com o site em si !!-->
-                <a class="botaos" href="https://github.com/allisoms">
+                <a class="botaos" href="https://github.com/AllisonMarquesSouza">
                     <img src="./imgs/github.png" alt="Símbolo do GitHub"> 
                     GitHub
                 </a>
-                <!--Lembrando que a tag da img não fecha com a /, ela é de uso único, por iso não precisa-->
             </div>
         </section>
         <img class="apresentacaoImagem"  src="./imgs/napiscina.jpg" alt="Homem bonito na Academia, Allison Marques" >
-        <!-- Esse imgs na frente da imagem, identifica a pasta que ela está no pc -->
-        <!-- Perceba que deixei a img fora da seção pra dividir ela, com a ajuda do flexbox no css, vão ficar uma do lado da outra alinhada com o centro! -->
     </main>
     <footer class="rodape">
-<!--O footer é o rodapé da página -->
         <p>Desenvolvido por Allison.</p>
     </footer>
 </body>
